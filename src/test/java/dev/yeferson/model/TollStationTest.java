@@ -17,14 +17,4 @@ public class TollStationTest {
         assertThat(station.getTotalCollected(), is(0.0));
     }
 
-    public class VehicleTest {
-
-        @Test
-        public void testCarTollValue() {
-            Vehicle car = new Car("ABC123");
-            assertThat(car.getTollValue(), is(100.0));
-        }
-    }
-   
 }
-

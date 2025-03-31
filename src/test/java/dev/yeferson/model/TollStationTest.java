@@ -17,4 +17,12 @@ public class TollStationTest {
         assertThat(station.getTotalCollected(), is(0.0));
     }
 
+    @Test
+    public void testRegisterVehicle() {
+        TollStation station = new TollStation("Huerna", "Asturias");
+        Vehicle car = new Car("ABC123");
+        station.registerVehicle(car);
+        assertThat(station.getTotalCollected(), is(100.0));
+    }
+
 }

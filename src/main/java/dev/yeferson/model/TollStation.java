@@ -33,4 +33,13 @@ public class TollStation {
         vehicles.add(vehicle);
     }
 
+    public void printSummary() {
+        System.out.println("Toll Station: " + name + " in " + city);
+        System.out.println("Vehicles:");
+        for (Vehicle v : vehicles) {
+            System.out.println("- " + v.getLicensePlate() + ": $" + v.getTollValue());
+        }
+        System.out.println("Total Collected: $" + totalCollected);
+    }
+
 }

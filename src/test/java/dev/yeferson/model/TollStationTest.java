@@ -25,4 +25,12 @@ public class TollStationTest {
         assertThat(station.getTotalCollected(), is(100.0));
     }
 
+    @Test
+    public void testPrintSummary() {
+        TollStation station = new TollStation("Huerna", "Asturias");
+        station.registerVehicle(new Car("ABC123"));
+        station.registerVehicle(new Motorcycle("XYZ789"));
+        station.registerVehicle(new Truck("TRK456", 2));
+        station.printSummary(); 
+    }
 }
